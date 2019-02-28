@@ -1,4 +1,4 @@
-﻿namespace PureOriginAPI
+﻿namespace PureOrigin.API
 {
     public enum AvatarSizeType
     {

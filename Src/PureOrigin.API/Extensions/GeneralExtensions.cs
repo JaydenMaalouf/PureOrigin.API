@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 
-namespace PureOriginAPI.Extensions
+namespace PureOrigin.API.Extensions
 {
     internal static class GeneralExtensions
     {

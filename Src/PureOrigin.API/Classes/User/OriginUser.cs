@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.Text.RegularExpressions;
 
-using PureOriginAPI.Interfaces;
+using PureOrigin.API.Interfaces;
 
-namespace PureOriginAPI
+namespace PureOrigin.API
 {
     [XmlRoot(ElementName = "user")]
     public class OriginUser : IOriginUser

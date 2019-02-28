@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PureOriginAPI\PureOriginAPI.csproj" />
+    <ProjectReference Include="..\PureOrigin.API\PureOrigin.API.csproj" />
   </ItemGroup>
 
 </Project>

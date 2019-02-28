@@ -2,7 +2,7 @@
 
 using Newtonsoft.Json;
 
-namespace PureOriginAPI.Classes.User
+namespace PureOrigin.API.Classes.User
 {
     public class OriginInternalUser
     {

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace PureOriginAPI.Interfaces
+namespace PureOrigin.API.Interfaces
 {
     public interface IOriginUser
     {

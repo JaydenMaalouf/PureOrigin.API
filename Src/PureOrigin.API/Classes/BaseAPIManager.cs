@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Net.Http.Headers;
 using System.Collections.Generic;
 
-namespace PureOriginAPI
+namespace PureOrigin.API
 {
     public class BaseAPIManager
     {

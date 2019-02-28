@@ -2,7 +2,7 @@
 using System.IO;
 using System.Xml.Serialization;
 
-namespace PureOriginAPI.Extensions
+namespace PureOrigin.API.Extensions
 {
     public static class XMLSerializerExtensions
     {

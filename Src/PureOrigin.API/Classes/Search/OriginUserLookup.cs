@@ -1,7 +1,7 @@
 ﻿using System.Xml.Serialization;
 using System.Collections.Generic;
 
-namespace PureOriginAPI.Classes.Search
+namespace PureOrigin.API.Classes.Search
 {
     [XmlRoot(ElementName = "users")]
     public class OriginUserLookup

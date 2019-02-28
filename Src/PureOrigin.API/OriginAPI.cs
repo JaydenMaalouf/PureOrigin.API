@@ -11,12 +11,11 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-using PureOriginAPI.Extensions;
-using PureOriginAPI.Interfaces;
-using PureOriginAPI.Classes.User;
-using PureOriginAPI.Classes.Search;
+using PureOrigin.API.Extensions;
+using PureOrigin.API.Classes.User;
+using PureOrigin.API.Classes.Search;
 
-namespace PureOriginAPI
+namespace PureOrigin.API
 {
     public class OriginAPI : BaseAPIManager
     {

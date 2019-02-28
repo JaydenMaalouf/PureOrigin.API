@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace PureOriginAPI.Classes.Search
+namespace PureOrigin.API.Classes.Search
 {
     internal class OriginUserSearchItem
     {
