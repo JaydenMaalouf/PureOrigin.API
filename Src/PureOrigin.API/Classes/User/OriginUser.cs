@@ -4,12 +4,15 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.Text.RegularExpressions;
 
+using Newtonsoft.Json;
+
 using PureOrigin.API.Interfaces;
+using PureOrigin.API.Extensions;
 
 namespace PureOrigin.API
 {
     [XmlRoot(ElementName = "user")]
-    public class OriginUser : IOriginUser
+    public class OriginUser : IOriginUser, ISerialisable
     {
         [XmlElement("EAID")]
         public string Username { get; set; }
@@ -38,6 +41,11 @@ namespace PureOrigin.API
                 }
             }
             return null;
+        }
+
+        public string Serialize()
+        {
+            return JsonConvert.SerializeObject(this, new JsonSerializerSettings { ContractResolver = new CustomJsonResolver(), Formatting = Formatting.Indented });
         }
     }
 }

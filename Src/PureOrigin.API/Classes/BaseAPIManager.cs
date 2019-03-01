@@ -10,7 +10,6 @@ namespace PureOrigin.API
 {
     public class BaseAPIManager
     {
-        static readonly HttpRequestHeaders defaultHeaders;
         static readonly CookieContainer cookieContainer = new CookieContainer();
         static readonly HttpClientHandler clientHandler = new HttpClientHandler
         {
