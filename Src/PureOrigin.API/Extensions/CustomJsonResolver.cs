@@ -8,7 +8,7 @@ using Newtonsoft.Json.Serialization;
 
 namespace PureOrigin.API.Extensions
 {
-    class CustomJsonResolver : DefaultContractResolver
+    public class CustomJsonResolver : DefaultContractResolver
     {
         protected override List<MemberInfo> GetSerializableMembers(Type objectType)
         {

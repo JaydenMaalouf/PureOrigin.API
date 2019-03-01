@@ -1,6 +1,6 @@
 ﻿namespace PureOrigin.API.Interfaces
 {
-    interface ISerialisable
+    public interface ISerialisable
     {
         string Serialize();
     }
