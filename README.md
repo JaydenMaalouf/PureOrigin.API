@@ -15,24 +15,29 @@ var API = new OriginAPI("example@email.com", "password");
 Now you can easily make calls to the API.
 
 ## GetUserAsync()
-If you already know a user's Guid or Username, you can use the `GetUserAsync()` method to return an `OriginUser` object.
+If you already know a user's UserId or Username, you can use the `GetUserAsync()` method to return an `OriginUser` object.
 - Username:
 ```csharp
-var user = API.GetUserAsync("username");
+var user = await API.GetUserAsync("username");
+```
+- UserId:
+```csharp
+var user = await API.GetUserAsync(userId);
 ```
 
 ## GetUsersAsync()
 Same as `GetUserAsync()` but allows to search by generic terms.
 - This will return any users who's username starts with `user`:
 ```csharp
-var users = API.GetUsersAsync("user");
+var users = await API.GetUsersAsync("user");
 ```
   
 ## GetAvatarUrlAsync()
 If you're wanting to get a user's avatar, you can simply use `.GetAvatarUrlAsync();` and it will return said avatar's url.
 ```csharp
-var user = API.GetUserAsync("username");
+var user = await API.GetUserAsync("username");
 var url = await user.GetAvatarUrlAsync();
 ```
 
 Thanks for using my wrapper <3 By Kanga#8041
+Please note: This API wrapper is for educational purposes only. I am not affiliated with Origin or any of it's entities. 
