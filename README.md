@@ -12,7 +12,13 @@ Then simply instance the OriginAPI class with your Origin Email and Password, li
 ```csharp
 var API = new OriginAPI("example@email.com", "password");
 ```
-Now you can easily make calls to the API.
+Then login to Origin with the `LoginAsync()` call:
+```csharp
+var result = await API.LoginAsync();
+```
+The `result` boolean will be set to true or false depending on the login success.
+
+#### Now you can easily make calls to the API!
 
 ## GetUserAsync()
 If you already know a user's UserId or Username, you can use the `GetUserAsync()` method to return an `OriginUser` object.
@@ -39,6 +45,6 @@ var user = await API.GetUserAsync("username");
 var url = await user.GetAvatarUrlAsync();
 ```
 
-Thanks for using my wrapper ❤️ By Kanga#8041.
+#### Thanks for using my wrapper ❤️ By Kanga#8041.
 
-**Please note: This API wrapper is for educational purposes only. I am not affiliated with Origin or any of it's entities.
+**Please note: This API wrapper is for educational purposes only. I am not affiliated with Origin or any of it's entities.**
