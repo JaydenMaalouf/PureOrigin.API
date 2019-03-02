@@ -3,7 +3,7 @@ A .NET API Wrapper for the Origin Launcher API
 Documentation is found below!
 
 ## Installation
-Our stable build is available from NuGet through the ApexAPI metapackage:
+Our stable build is available from NuGet through the PureOrigin.API metapackage:
 - [PureOrigin.API](https://www.nuget.org/packages/PureOrigin.API/)
 
 ## Getting Started
