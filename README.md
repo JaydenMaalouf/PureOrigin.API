@@ -39,5 +39,5 @@ var user = await API.GetUserAsync("username");
 var url = await user.GetAvatarUrlAsync();
 ```
 
-Thanks for using my wrapper <3 By Kanga#8041
-Please note: This API wrapper is for educational purposes only. I am not affiliated with Origin or any of it's entities. 
+Thanks for using my wrapper ❤️ By Kanga#8041
+**Please note: This API wrapper is for educational purposes only. I am not affiliated with Origin or any of it's entities. **
