@@ -9,7 +9,7 @@ namespace PureOrigin.API.Classes.User
         internal OriginInternalUser() { }
 
         [JsonProperty("pidId")]
-        public string UserId { get; internal set; }
+        public ulong UserId { get; internal set; }
         [JsonProperty]
         public string Email { get; internal set; }
         [JsonProperty]

@@ -214,7 +214,8 @@ namespace PureOrigin.API
             }
             return null;
         }
-        
+
+        public virtual async Task<OriginUser> GetUserAsync(ulong userId) => await LookupUserAsync(userId);
         public virtual async Task<OriginUser> GetUserAsync(string username, bool explicitUsername = true)
         {
             var users = await GetUsersAsync(username);
@@ -235,7 +236,7 @@ namespace PureOrigin.API
         public const int MAX_USER_SEARCH = 5;
         public virtual async Task<IEnumerable<OriginUser>> GetUsersAsync(string username, int count = MAX_USER_SEARCH)
         {
-            var request = CreateRequest(HttpMethod.Get, OriginURLs.ORIGIN_USER_SEARCH, new KeyValuePair<string, string>("userId", InternalUser.UserId), new KeyValuePair<string, string>("searchTerm", username));
+            var request = CreateRequest(HttpMethod.Get, OriginURLs.ORIGIN_USER_SEARCH, new KeyValuePair<string, string>("userId", InternalUser.UserId.ToString()), new KeyValuePair<string, string>("searchTerm", username));
             var response = await SendAsync(request);
             if (response.StatusCode == HttpStatusCode.OK)
             {
@@ -256,7 +257,7 @@ namespace PureOrigin.API
             return null;
         }
 
-        protected virtual async Task<OriginUser> LookupUserAsync(string UserId)
+        protected virtual async Task<OriginUser> LookupUserAsync(ulong UserId)
         {
             var users = await LookupUsersAsync(UserId);
             if (users.Count() > 0)
@@ -266,8 +267,8 @@ namespace PureOrigin.API
             return null;
         }
 
-        protected virtual async Task<IEnumerable<OriginUser>> LookupUsersAsync(params string[] UserIds) => await LookupUsersAsync(UserIds.AsEnumerable());
-        protected virtual async Task<IEnumerable<OriginUser>> LookupUsersAsync(IEnumerable<string> UserIds)
+        protected virtual async Task<IEnumerable<OriginUser>> LookupUsersAsync(params ulong[] UserIds) => await LookupUsersAsync(UserIds.AsEnumerable());
+        protected virtual async Task<IEnumerable<OriginUser>> LookupUsersAsync(IEnumerable<ulong> UserIds)
         {
             var request = CreateRequest(HttpMethod.Get, OriginURLs.ORIGIN_USER_ID_SEARCH, new KeyValuePair<string, string>("userIds", string.Join(",", UserIds)));
             var response = await SendAsync(request);

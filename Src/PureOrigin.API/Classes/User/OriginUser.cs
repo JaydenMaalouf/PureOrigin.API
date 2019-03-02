@@ -18,10 +18,10 @@ namespace PureOrigin.API
         public string Username { get; set; }
 
         [XmlElement("userId")]
-        public string UserId { get; set; }
+        public ulong UserId { get; set; }
 
         [XmlElement("personaId")]
-        public string PersonaId { get; set; }
+        public ulong PersonaId { get; set; }
 
         public async Task<string> GetAvatarUrlAsync(AvatarSizeType sizeType = AvatarSizeType.LARGE)
         {
